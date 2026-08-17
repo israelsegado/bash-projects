@@ -12,15 +12,15 @@ for file in "$FILE_ORIGIN"/*
 do
     case "$(basename "$file")" in #check the extension of the file
         *.txt)
-            mkdir -p -v "$ORGANIZED_FOLDER/txt_files"
-            mv "$file" "$ORGANIZED_FOLDER/txt_files/"
+            mkdir -p -v "$ORGANIZED_FOLDER/txt_folder"
+            mv "$file" "$ORGANIZED_FOLDER/txt_folder/"
             ;;
         *.pdf)
-            mkdir -p -v "$ORGANIZED_FOLDER/pdf_files"
-            mv "$file" "$ORGANIZED_FOLDER/pdf_files"
+            mkdir -p -v "$ORGANIZED_FOLDER/pdf_folder"
+            mv "$file" "$ORGANIZED_FOLDER/pdf_folder"
             ;;
         *.jpg|*.jpeg|*.png)
-            mkdir -p -v "$ORGANIZED_FOLDER/images_folder"
+            mkdir -p -v "$ORGANIZED_FOLDER/image_folder"
             mv "$file" "$ORGANIZED_FOLDER/images_folder"
             ;;
         *.docx|*.doc)
@@ -28,7 +28,7 @@ do
             mv "$file" "$ORGANIZED_FOLDER/doc_folder"
             ;;
         *)
-            mkdir -p -v "$ORGANIZED_FOLDER/other_files"
-            #mv "$file" "$ORGANIZED_FOLDER/other_files"
+            mkdir -p -v "$ORGANIZED_FOLDER/other_folder"
+            mv "$file" "$ORGANIZED_FOLDER/other_folder"
     esac
 done
