@@ -2,7 +2,7 @@
 
 #declaration of the variables with the path
 FILE_ORIGIN="$(pwd)"
-BACKUP_DIR="$FILE_ORIGIN/../backup_registry"
+BACKUP_DIR="$FILE_ORIGIN/../backup_registry" #creation of the backup directory in it's directory
 
 mkdir -p -v "$BACKUP_DIR" #creation of the backup directory
 
